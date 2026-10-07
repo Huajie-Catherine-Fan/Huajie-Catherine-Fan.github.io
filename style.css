@@ -1,0 +1,15 @@
+* {
+    box-sizing: border-box;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+html {
+    background-color:#EFEEE5;
+}
+
+body {
+    max-width: 900px;
+    margin: 40px auto;
+    background-color:seashell;
+    padding: 40px;
+}
