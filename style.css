@@ -131,6 +131,13 @@ p .term {
     font-style: italic;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
 div {
     width: 100%;
     margin-bottom: 1em;
