@@ -4,7 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FHJ</title>
-    <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="style.css">
+    <link
+         rel="stylesheet"
+         href="https://cdn.jsdelivr.net/npm/justified-gallery@4/dist/assets/justified-gallery.css"
+    />
+    <link
+         rel="stylesheet"
+         href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"
+    />
+
+
 </head>
 <body>
     <header>
@@ -15,10 +25,104 @@
             <a href="Qianfo.html"><i>Qianfo</i> <span lang="zh">千佛</span></a>
         </nav>
     </header>
-    <main>
-        <h2><i>Qianfo</i> <span lang="zh">千佛</span></h2>
-        <img src="images/台州临海巾山千佛塔.jpeg"
-        alt="Qianfo Pagoda in Linhai, Taizhou">
+        <main>
+
+        <h2>
+            <i>Qianfo</i> <span lang="zh">千佛</span>
+        </h2>
+
+
+        <div id="gallery" class="justified-gallery">
+
+            <a
+                href="images/台州临海巾山千佛塔.jpeg"
+                class="glightbox"
+                data-gallery="qianfo-gallery"
+                data-title="Jinshan Qianfo Pagoda"
+                data-description="Linhai, Taizhou, Zhejiang. Photograph by the author."
+            >
+                <img
+                    src="images/台州临海巾山千佛塔.jpeg"
+                    alt="Qianfo Pagoda in Linhai, Taizhou"
+                >
+            </a>
+
+
+            <a
+                href="images/温州国安寺塔.jpeg"
+                class="glightbox"
+                data-gallery="qianfo-gallery"
+                data-title="Guo'an Temple Pagoda"
+                data-description="Wenzhou, Zhejiang. Photograph by the author."
+            >
+                <img
+                    src="images/温州国安寺塔.jpeg"
+                    alt="Qianfo Pagoda in Wenzhou"
+                >
+            </a>
+
+
+            <a
+                href="images/湖州飞英内塔.jpeg"
+                class="glightbox"
+                data-gallery="qianfo-gallery"
+                data-title="Feiying Inner Pagoda"
+                data-description="Huzhou, Zhejiang. Photograph by the author."
+            >
+                <img
+                    src="images/湖州飞英内塔.jpeg"
+                    alt="Qianfo Pagoda in Huzhou"
+                >
+            </a>
+
+
+            <a
+                href="images/台州天台国清大塔.jpeg"
+                class="glightbox"
+                data-gallery="qianfo-gallery"
+                data-title="Guoqing Great Pagoda"
+                data-description="Tiantai, Taizhou, Zhejiang. Photograph by the author."
+            >
+                <img
+                    src="images/台州天台国清大塔.jpeg"
+                    alt="Qianfo Pagoda in Tiantai, Taizhou"
+                >
+            </a>
+
+        </div>
+
     </main>
+
+    <script type="module">
+
+      import { JustifiedGallery }
+         from 'https://cdn.jsdelivr.net/npm/justified-gallery@4/+esm';
+
+     const container = document.getElementById('gallery');
+
+     const gallery = new JustifiedGallery(container, {
+         rowHeight: 200,
+        margins: 8,
+        lastRow: 'nojustify',
+        sizeRangeSuffixes: { 0: '' }
+        });
+
+         gallery.init();
+
+        </script>
+
+<script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+
+    <script>
+        const lightbox = GLightbox({
+         selector: '.glightbox',
+         touchNavigation: true,
+         keyboardNavigation: true,
+         loop: true,
+         zoomable: true,
+         draggable: true
+    });
+</script>
+
 </body>
 </html>
