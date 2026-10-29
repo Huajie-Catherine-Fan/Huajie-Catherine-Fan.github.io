@@ -38,8 +38,8 @@
                 href="images/台州临海巾山千佛塔.jpeg"
                 class="glightbox"
                 data-gallery="qianfo-gallery"
-                data-title="Jinshan Qianfo Pagoda"
-                data-description="台州临海巾山千佛塔 Linhai, Taizhou, Zhejiang. Photograph by the author."
+                data-title="Jinshan Pagoda"
+                data-description="台州临海巾山千佛塔 Linhai, Taizhou, Zhejiang. Photograph by Catherine Fan."
             >
                 <img
                     src="images/台州临海巾山千佛塔.jpeg"
@@ -47,17 +47,30 @@
                 >
             </a>
 
-
             <a
-                href="images/温州国安寺塔.jpeg"
+                href="images/台州天台国清大塔.jpeg"
                 class="glightbox"
                 data-gallery="qianfo-gallery"
-                data-title="Guo'an Temple Pagoda"
-                data-description="温州国安寺塔 Wenzhou, Zhejiang. Photograph by the author."
+                data-title="Guoqing Great Pagoda"
+                data-description="台州天台国清大塔 Tiantai, Taizhou, Zhejiang. Photograph by Catherine Fan."
             >
                 <img
-                    src="images/温州国安寺塔.jpeg"
-                    alt="Qianfo Pagoda in Wenzhou"
+                    src="images/台州天台国清大塔.jpeg"
+                    alt="Qianfo Pagoda in Tiantai, Taizhou"
+                >
+            </a>
+
+
+            <a
+                href="images/安岳毗卢洞千佛洞.jpg"
+                class="glightbox"
+                data-gallery="qianfo-gallery"
+                data-title="Pulu Caves Qianfo dong "
+                data-description="安岳毗卢洞千佛洞 Anyue, Sichuan. Photograph by Catherine Fan."
+            >
+                <img
+                    src="images/安岳毗卢洞千佛洞.jpg"
+                    alt="Qianfo Grotto in Anyue, Sichuan"
                 >
             </a>
 
@@ -67,7 +80,7 @@
                 class="glightbox"
                 data-gallery="qianfo-gallery"
                 data-title="Feiying Inner Pagoda"
-                data-description="湖州飞英内塔 Huzhou, Zhejiang. Photograph by the author."
+                data-description="湖州飞英内塔 Huzhou, Zhejiang. Photograph by Catherine Fan."
             >
                 <img
                     src="images/湖州飞英内塔.jpeg"
@@ -75,19 +88,75 @@
                 >
             </a>
 
-
-            <a
-                href="images/台州天台国清大塔.jpeg"
+                     <a
+                href="images/子长钟山石窟.JPG"
                 class="glightbox"
                 data-gallery="qianfo-gallery"
-                data-title="Guoqing Great Pagoda"
-                data-description="台州天台国清大塔 Tiantai, Taizhou, Zhejiang. Photograph by the author."
+                data-title="Zichang Zhongshan Grottoes"
+                data-description="子长钟山石窟 Zhongshan Grottoes, Zichang,Shaanxi. Photograph by Catherine Fan."
             >
                 <img
-                    src="images/台州天台国清大塔.jpeg"
-                    alt="Qianfo Pagoda in Tiantai, Taizhou"
+                    src="images/子长钟山石窟.JPG"
+                    alt="Zhongshan Grottoes in Zichang,Shaanxi."
                 >
             </a>
+
+            <a
+                href="images/广州光孝寺铁塔.JPG"
+                class="glightbox"
+                data-gallery="qianfo-gallery"
+                data-title="Guangxiao Temple Iron Pagoda"
+                data-description="广州光孝寺铁塔 Guangzhou, Guangdong. Photograph by Catherine Fan."
+            >
+                <img
+                    src="images/广州光孝寺铁塔.JPG"
+                    alt="Guangxiao Temple Iron Pagoda in Guangzhou, Guangdong"
+                >
+            </a>
+
+                <a
+                href="images/杭州雷峰塔石刻残片.JPG"
+                class="glightbox"
+                data-gallery="qianfo-gallery"
+                data-title="Leifeng Pagoda Inscised Stone fragment"
+                data-description="杭州雷峰塔石刻 Hangzhou, Zhejiang. Photograph by Catherine Fan."
+            >
+                <img
+                    src="images/杭州雷峰塔石刻残片.JPG"
+                    alt="Leifeng Pagoda Stone fragment in Hangzhou"
+                >
+            </a>
+
+            <a
+                href="images/温州国安寺塔.jpeg"
+                class="glightbox"
+                data-gallery="qianfo-gallery"
+                data-title="Guo'an Temple Pagoda"
+                data-description="温州国安寺塔 Wenzhou, Zhejiang. Photograph by Catherine Fan."
+            >
+                <img
+                    src="images/温州国安寺塔.jpeg"
+                    alt="Guo'an Temple Pagoda in Wenzhou"
+                >
+            </a>
+
+
+
+
+            <a
+                href="images/陕西富县石泓寺.jpg"
+                class="glightbox"
+                data-gallery="qianfo-gallery"
+                data-title="Shihong Cave Temple"
+                data-description="陕西富县石泓寺 Shaanxi. Photograph by Catherine Fan."
+            >
+                <img
+                    src="images/陕西富县石泓寺.jpg"
+                    alt="Shihong Cave Temple in Fuxian, Shaanxi"
+                >
+            </a>
+
+
 
         </div>
 
@@ -101,8 +170,9 @@
      const container = document.getElementById('gallery');
 
      const gallery = new JustifiedGallery(container, {
-         rowHeight: 200,
-        margins: 8,
+        rowHeight: 180,
+        maxRowHeight: 220,
+        margins: 10,
         lastRow: 'nojustify',
         sizeRangeSuffixes: { 0: '' }
         });
@@ -120,7 +190,8 @@
          keyboardNavigation: true,
          loop: true,
          zoomable: true,
-         draggable: true
+         draggable: true,
+         descPosition: 'right'
     });
 </script>
 
