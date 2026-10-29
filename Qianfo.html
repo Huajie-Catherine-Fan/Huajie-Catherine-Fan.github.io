@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FHJ</title>
-     <link rel="stylesheet" href="style.css">
     <link
          rel="stylesheet"
          href="https://cdn.jsdelivr.net/npm/justified-gallery@4/dist/assets/justified-gallery.css"
@@ -13,7 +12,9 @@
          rel="stylesheet"
          href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"
     />
-
+     
+    <link rel="stylesheet" href="style.css"
+    />
 
 </head>
 <body>
@@ -186,6 +187,7 @@
     <script>
         const lightbox = GLightbox({
          selector: '.glightbox',
+         skin: 'qianfo',
          touchNavigation: true,
          keyboardNavigation: true,
          loop: true,
