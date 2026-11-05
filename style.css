@@ -142,6 +142,37 @@ div {
     margin-bottom: 1em;
 }
 
+/* Projects */
+
+.project + .project {
+    margin-top: 3em; /* Add top margin to all of the project divs except the first one. */
+}
+
+.project-header {
+    display: grid;
+    grid-template-columns: repeat(6,1fr); /* Establishes a grid pattern of six equal columns) */
+    gap: 1em; /* Sets a 1em gap between the columns. */
+    border-top: 1px solid rgba(0,0,0,0.25);
+    font-size: 0.825em;
+    grid-template-rows: repeat(auto-fill, minmax(50px, auto)); /* Sets a minimum height of 50px for the grid cells.*/
+}
+
+.project-header h2 {
+    grid-column: span 4; /* Sets the project title to span four of the six available columns in the layout. */
+    margin:0; /* Unsets the default margin for title.*/
+    font-size: 1em; /* Ensures the heading is the same font size as other elements in teh header.*/
+    font-weight: 600;
+    font-family: unset; /* Ensures the heading is the same font family as other elements in the header.*/
+    padding: 0.5em;
+}
+
+.project-header p {
+    margin: 0;
+    font-size: 1em;
+    padding: 0.5em;
+    border-left: 1px solid rgba(0,0,0,0.25);
+}
+
 
 /* ========================================
    GLIGHTBOX — DESKTOP 70 / 30 LAYOUT
