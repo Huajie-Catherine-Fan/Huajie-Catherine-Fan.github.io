@@ -1,52 +1,71 @@
 * {
     box-sizing: border-box;
+    background-color:#764346;
+    color: seashell;
 }
 
 html {
-    background-color:#A65B5B;
-}
-
-body {
-    max-width: 1000px;
-    margin: 40px auto;
-    background-color:seashell;
-    padding: 40px;
-    font-family: "Inter", sans-serif;
-    font-weight: 500;
-}
-
-header,
-main {
-    width: 100%;
-    margin: 0;
-    padding: 0;
+    background-color:#764346;
 }
 
 :lang(zh) {
     font-family: "Songti SC", "SimSun", serif;
 }
 
-/* FAN, Huajie Catherine Name */
-header p {
+/* Header Section */
+header {
+    width:100%;
+    max-width: 1200px;
+    margin: 0 auto 4rem auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 1rem;
+}
+
+header p.header-design {
     font-family: "Gowun Batang", serif;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     margin:0;
 }
 
-/* Tab section */
+.header-design a{
+    padding: 8px 0;
+    font: inherit;
+    color: inherit;
+    text-decoration:none;
+}
+
+.header-design a:visited {
+    font: inherit;
+    color:inherit;
+    text-decoration: none;
+}
+.header-design a:hover,
+.header-design a:focus,
+.header-design a:active {
+    font: inherit;
+    color: inherit;
+    font-size: 1.55rem;
+    text-decoration: none;
+}
+
 header nav {
     display: flex;
-    gap: 1.1rem;
+    gap: 1.3rem;
     align-items: flex-start;
 }
-header nav a {
+
+header nav a,
+header nav a:visited {
     display: block;
     font-family: "Gowun Batang", serif;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     line-height: 2;
     margin:0;
     padding:0;
-    color: #4076a1;
+    opacity: 0.8;
+    text-decoration: none;
 }
 
 header nav a span[lang="zh"] {
@@ -54,22 +73,47 @@ header nav a span[lang="zh"] {
     font-size: 1em;
     line-height: 1;
     vertical-align: baseline;
-}
-.qianfo-nav {
-    position: relative;
-    top: -3.5px;
+    text-decoration: none;
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
+header nav a:hover,
+header nav a:focus,
+header nav a:active {
+    opacity: 1 !important;
+    text-decoration: underline;
+}
+
+header nav a.active {
+    opacity: 1 !important;
 }
 
 
-/* =========================
-   HEADINGS
-   ========================= */
+/* Main section */
+main {
+    width: 100%;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: auto auto auto;
+}
+
+:root {
+    --wide-width: 100%;
+    --wide-max: 1200px;
+    --text-width: 50%;
+    --text-max: 650px;
+}
+
+.text-content {
+    width: var(--text-width);
+    max-width: var(--text-max);
+
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: left;
+}
+
+/* HEADINGS */
 h1,
 h2,
 h3,
@@ -100,33 +144,30 @@ h6 {
     font-size: 1rem;
 }
 
-/* =========================
-   PARAGRAPHS
-   ========================= */
+/* PARAGRAPHS */
 
 p {
     font-family: "Inter", sans-serif;
-    font-weight: 500;
-
-    font-size: 1rem;
-    line-height: 1.35;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.5;
     letter-spacing: 0.02em;
-
+    text-align:justify;
     margin-top: 0;
     margin-bottom: 1.2em;
 }
 /* Links inside paragraphs */
 p a {
     font-family: "Inter", sans-serif;
-    font-weight: 500;
-    color: #4076a1;
+    font-weight: 400;
+    color: #e7daf6;
 }
 /* Italic text inside paragraphs */
 p i,
 p em,
 p .term {
     font-family: "Inter", sans-serif;
-    font-weight: 500;
+    font-weight: 400;
     font-style: italic;
 }
 
@@ -137,10 +178,106 @@ img {
 }
 
 
-div {
-    width: 100%;
-    margin-bottom: 1em;
+/* INDEX PAGE PHOTO GRID */
+
+.index-grids {
+    width: 92%;
+    max-width: 1200px;
+    margin: 2rem auto 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    overflow: hidden;
 }
+
+
+/* Individual photo */
+
+.index-card {
+    position: relative;
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    color: white;
+    text-decoration: none;
+}
+
+
+/* Photos */
+
+.index-card img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.35s ease;
+}
+
+
+/* =========================================
+   TITLE OVERLAY
+   ========================================= */
+
+.index-overlay {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    padding: 1.2rem;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0) 65%
+        );
+
+    opacity: 0;
+
+    transition: opacity 0.3s ease;
+}
+
+
+.index-overlay h2 {
+    font-family: "Gowun Batang", serif;
+
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.15;
+
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    margin: 0;
+}
+
+
+.index-overlay p {
+    font-family: "Inter", sans-serif;
+
+    font-size: 0.8rem;
+    font-weight: 400;
+
+    color: rgba(255, 255, 255, 0.85);
+    background: rgba(0, 0, 0, 0.5);
+    margin: 0.4rem 0 0;
+}
+
+
+/* =========================================
+   HOVER
+   ========================================= */
+
+.index-card:hover .index-overlay {
+    opacity: 1;
+}
+
+.index-card:hover img {
+    transform: scale(1.02);
+}
+
 
 /* Projects */
 
@@ -150,7 +287,7 @@ div {
 
 .project-header {
     display: grid;
-    grid-template-columns: repeat(6,1fr); /* Establishes a grid pattern of six equal columns) */
+    grid-template-columns: 1fr 1fr 1fr 0.8fr 0.7fr 1.5fr; /* Establishes a grid pattern) */
     gap: 1em; /* Sets a 1em gap between the columns. */
     border-top: 1px solid rgba(0,0,0,0.25);
     font-size: 0.825em;
@@ -160,18 +297,21 @@ div {
 .project-header h2 {
     grid-column: span 4; /* Sets the project title to span four of the six available columns in the layout. */
     margin:0; /* Unsets the default margin for title.*/
-    font-size: 1em; /* Ensures the heading is the same font size as other elements in teh header.*/
-    font-weight: 600;
+    font-size: 1.4em; /* Ensures the heading is the same font size as other elements in teh header.*/
+    font-weight: 800;
     font-family: unset; /* Ensures the heading is the same font family as other elements in the header.*/
+    line-height: 1.5;
     padding: 0.5em;
 }
 
 .project-header p {
     margin: 0;
-    font-size: 1em;
+    font-size: 1.2em;
     padding: 0.5em;
+    line-height: 1.2;
     border-left: 1px solid rgba(0,0,0,0.25);
 }
+
 
 
 /* ========================================
